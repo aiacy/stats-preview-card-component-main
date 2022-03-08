@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Stats preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,10 +19,24 @@
 
     body{
       background-color: hsl(233, 47%, 7%);
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
     }
 
+    main{
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      width: inherit;
+      height: inherit;
+    }
+
+
     h1{
+      font-family: 'Inter', sans-serif;
       color: hsl(0, 0%, 100%);
+      
     }
 
     .accent{
@@ -30,6 +46,8 @@
     .component{
       display: grid;
       grid-template-columns: 1fr 1fr;
+      width: 1100px;
+      height: fit-content;
     }
 
     .component-info-container{
@@ -44,14 +62,25 @@
     .info{
       margin-top: 2rem;
       padding-right: 5rem;
+      line-height: 1.5rem;
     }
 
     .component-img-container{
       height: 400px;
+  
+      z-index: 1;
+      
     }
 
     .component-img-container img{
       height: inherit;
+ 
+    }
+
+    .component-img-container img{
+      height: inherit;
+      background: hsla(277, 64%, 61%, 30%);
+      z-index: 2;
     }
 
     .stats-container{
@@ -60,7 +89,17 @@
       margin-top: 2rem;
     }
 
-    .attribution { font-size: 11px; text-align: center; }
+    h2.number{
+      color: hsl(0, 0%, 100%);
+    }
+
+    p.description{
+      text-transform: uppercase;
+      font-family: 'Lexend Deca', sans-serif;
+      line-height: 1.5rem;
+    }
+
+    .attribution { font-size: 11px; text-align: center; color: hsl(228, 45%, 44%); margin: 1rem; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
@@ -74,15 +113,15 @@
           experience, and overall efficiency.</p>
         <div class="stats-container">
           <div class="stat-1">
-            <p class="number">10k+</p>
+            <h2 class="number">10k+</h2>
             <p class="description">companies</p>
           </div>
           <div class="stat-2">
-            <p class="number">314</p>
+            <h2 class="number">314</h2>
             <p class="description">templates</p>
           </div>
           <div class="stat-3">
-            <p class="number">12m+ </p>
+            <h2 class="number">12m+ </h2>
             <p class="description">queries</p>
           </div>
         </div>
@@ -94,7 +133,7 @@
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Aliyah Regina</a>.
     </div>
 
   </main>
